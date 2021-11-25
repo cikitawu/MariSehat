@@ -1,0 +1,19 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_adx_entityform_forms",
+      "Namespace": "Basic Forms (Forms)",
+      "Values": {
+        "Information": "2b970b06-8b9e-40fd-bedb-1cc99a09a258"
+      }
+    },
+    {
+      "Kind": "default.cds_queue_forms",
+      "Namespace": "Queues (Forms)",
+      "Values": {
+        "Information": "a96ce25b-0ba6-4862-a0df-537b9c4e0006",
+        "Queue": "6ed25386-e3ec-4e2b-bc5e-6a2a7803c8f3"
+      }
+    }
+  ]
+}

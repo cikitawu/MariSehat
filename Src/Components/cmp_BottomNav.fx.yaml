@@ -1,0 +1,73 @@
+cmp_BottomNav As CanvasComponent:
+    Color: =White
+    CurrentIndicatorColor: =ColorFade(RGBA(29,161,242,1),70%)
+    Default: ="Item 1"
+    Fill: =RGBA(51, 52 ,74, 1)
+    Height: =130
+    HoverFill: =RGBA(255,255,255,10%)
+    Items: |-
+        =Table(
+            {Value: "Item 1", Icon: Icon.Waypoint, Screen: App.ActiveScreen},
+            {Value: "Item 2", Icon: Icon.Waypoint, Screen: App.ActiveScreen}
+         )
+    SelectedFill: =RGBA(255,255,255,10%)
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    gal_BottomNav As gallery.galleryHorizontal:
+        Height: =Parent.Height
+        Items: =cmp_BottomNav.Items
+        OnSelect: =Navigate(ThisItem.Screen)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        Width: =Parent.Width
+        Y: =Parent.Height-Self.Height
+        ZIndex: =1
+
+        Icon1 As icon.Add:
+            Color: =cmp_BottomNav.Color
+            Height: =61
+            Icon: =ThisItem.Icon
+            OnSelect: =Select(Parent)
+            Width: =80
+            X: =120
+            Y: =16
+            ZIndex: =1
+
+        lbl_BottomNav_value As label:
+            Align: =Align.Center
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Parent.TemplateHeight/5
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Value
+            Width: =Parent.TemplateWidth
+            Y: =82
+            ZIndex: =2
+
+        lbl_BottomNav_Current As label:
+            Align: =Align.Center
+            Fill: =cmp_BottomNav.CurrentIndicatorColor
+            Height: =10
+            LineHeight: =5
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =
+            Visible: =ThisItem.Value=cmp_BottomNav.Default
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight-Self.Height
+            ZIndex: =3
+
+        lbl_BottomNax_Overlay As label:
+            Fill: =If(ThisItem.Value=cmp_BottomNav.Default, cmp_BottomNav.SelectedFill, Transparent)
+            Height: =Parent.TemplateHeight
+            HoverFill: =cmp_BottomNav.HoverFill
+            OnSelect: =Select(Parent)
+            PressedFill: =cmp_BottomNav.SelectedFill
+            Size: =21
+            Text: =
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+

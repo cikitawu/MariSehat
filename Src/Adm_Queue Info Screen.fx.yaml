@@ -1,0 +1,94 @@
+"'Adm_Queue Info Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    Adm_Bottom_NavBar_1 As cmp_BottomNav:
+        Default: ="Informasi Antrean"
+        Items: |-
+            =Table(
+                {Value: "Informasi Antrean", Icon: Icon.Waypoint, Screen: 'Adm_Queue Info Screen'},
+                {Value: "Atur Antrean", Icon: Icon.Waypoint, Screen: 'Adm_Queue List Screen'}
+             )
+        Y: =1006
+
+    DataTable1 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        HeadingSize: =21
+        Height: =918
+        Items: =RegistrationDetails
+        Size: =21
+        Width: =Parent.Width
+        X: =0
+        Y: =88
+        ZIndex: =2
+
+        NamaLengkap_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="NamaLengkap"
+            FieldName: ="NamaLengkap"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.NamaLengkap
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        NomorTelepon_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="NomorTelepon"
+            FieldName: ="NomorTelepon"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.NomorTelepon
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        NoUrut_Column1 As dataTableColumn.numberColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="NoUrut"
+            FieldName: ="ID"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.NoUrut
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        Kehadiran_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Kehadiran"
+            FieldName: ="Kehadiran"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.Kehadiran.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+    RectQuickActionBar3_1 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =3
+
+    LblAppName1_1 As label:
+        Align: =Align.Center
+        Height: =88
+        Size: =27
+        Text: ="Administrator MariSehat"
+        Width: =Parent.Width
+        ZIndex: =4
+

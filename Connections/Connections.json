@@ -1,0 +1,31 @@
+{
+  "dd828253-08a3-41d4-83bb-39f7621054eb": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/a02f62ef207040fe93b60b399eb71ea0",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1533/1.0.1533.2600/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://acmindonesia.sharepoint.com/sites/MariSehatRegistration": {
+        "dataSources": {
+          "RegistrationDetails": {
+            "tableName": "d89979d7-a404-4556-97f3-b1b2e87ddebc"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "RegistrationDetails"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "dd828253-08a3-41d4-83bb-39f7621054eb"
+  }
+}
